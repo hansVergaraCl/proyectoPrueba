@@ -1,0 +1,19 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <button color="accent" [routerLink]="['/home/componenteA']" mat-raised-button>
+            Componente A
+        </button><br>
+        <button color="warn" [routerLink]="['/home/componenteB']" mat-raised-button>
+            Componente B
+        </button><br>
+        <button color="primary" [routerLink]="['/home/componenteC']" mat-raised-button>
+            Componente C
+        </button>
+    </mat-drawer>
+    <!-- Component barra superior -->
+    <app-menu-superior (OpenMenuLateral)="openMenu();"></app-menu-superior>
+
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>
